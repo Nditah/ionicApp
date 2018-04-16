@@ -1,0 +1,38 @@
+page-product {
+	
+ 
+	.header .toolbar {
+		background: #000 !important;
+	}
+
+	[padding] {
+		background: #eee;
+	}
+
+	.prod-title {
+		color: #bf2f2f;
+	}
+
+	.prod-desc {
+		color: #555;
+	}
+
+	.prod-price {
+		color: #444;
+	}
+
+
+
+	.item {
+		margin-bottom: 5px;
+
+		.item-inner {
+			background: #fff;
+			border-bottom: 0 !important;
+
+		}
+
+	}
+ 
+}
+

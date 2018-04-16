@@ -1,0 +1,52 @@
+<!--
+  Generated template for the LandingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+   <ion-toolbar style="background:#f3b600 !important;">
+
+      <ion-buttons end>
+         <button ion-button icon-only (click)="logout()">           
+            <button ion-button item-right small color="primary"><ion-icon name="md-log-out"></ion-icon> Logout</button> 
+         </button>
+      </ion-buttons>
+
+   </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-title>Welcome</ion-title>
+
+
+	<ion-grid>
+		
+
+		<ion-row>
+			
+
+			<!-- <ion-col col-6 text-center><ion-icon block name="ios-flower" class="product-box" color="primary"></ion-icon></ion-col>
+ -->
+			<ion-col col-6 text-center><ion-icon block name="ios-basket" class="product-box"  color="primary" (click)="viewproduct()"></ion-icon></ion-col>
+
+		</ion-row>
+
+
+		<ion-row>
+			
+
+			<ion-col col-6 text-center><ion-icon block name="logo-bitcoin" class="product-box product-bitcoin"></ion-icon></ion-col>
+
+			<ion-col col-6 text-center><ion-icon block name="ios-beer" class="product-box product-beer"></ion-icon></ion-col>
+
+		</ion-row>
+
+	</ion-grid>
+
+</ion-content>

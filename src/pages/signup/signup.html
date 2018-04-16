@@ -1,0 +1,58 @@
+
+<!-- <ion-header>
+  	<ion-navbar>
+    	<ion-title>Register</ion-title>
+  	</ion-navbar>
+</ion-header>
+ -->
+
+<ion-content padding class="appBackground">
+
+    <button ion-button clear (click)="closeModal()" style="display: block"><ion-icon name="close"></ion-icon></button>
+
+
+    <ion-title text-center>Register</ion-title>
+
+
+    <img src="../assets/imgs/logo-rest.png" style="margin: 0 auto;"/>
+ 
+
+    <form [formGroup]="form" (ngSubmit)="signup()">
+
+        <ion-list>
+
+            <ion-item-group>
+                <ion-item>
+                    <ion-label stacked>Name</ion-label>
+                    <ion-input type="text" formControlName="name" [(ngModel)]="userData.name"></ion-input>
+                </ion-item>
+            </ion-item-group>
+
+            <ion-item-group>
+                <ion-item>
+                    <ion-label stacked>Email</ion-label>    
+                    <ion-input type="email" name="email" formControlName="email" [(ngModel)]="userData.email" email="true"></ion-input>
+                </ion-item>
+            </ion-item-group>
+
+            <ion-item-group>
+                <ion-item>
+                    <ion-label stacked>Username</ion-label>
+                    <ion-input type="text" formControlName="username" [(ngModel)]="userData.username"></ion-input>
+                </ion-item>
+            </ion-item-group>
+
+            <ion-item-group>
+                <ion-item>
+                    <ion-label stacked>Password</ion-label>
+                    <ion-input type="text" formControlName="password" [(ngModel)]="userData.password"></ion-input>
+                </ion-item>
+            </ion-item-group>
+
+            <button ion-button block round color="success" [disabled]="!form.valid">Register</button>
+             
+        </ion-list>
+
+    </form>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+
+ 
+   <ion-toolbar class="toolbar-color">
+
+      <ion-buttons end>
+         <button ion-button icon-onl (click)="landingPage()">
+            
+            <button ion-button item-right small outline color="primary"><ion-icon name="home"></ion-icon></button> 
+
+         </button>
+      </ion-buttons>
+
+      <ion-buttons end>
+         <button ion-button icon-only (click)="addEntry()">
+            
+            <button ion-button item-right small outline  color="primary"><ion-icon name="create"></ion-icon> New</button> 
+
+         </button>
+      </ion-buttons>
+
+      <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+
+   </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+   
+   <ion-item *ngFor="let item of items">
+
+      <small class="prod-title"><strong>Name: {{ item.name }}</strong> </small><br/>
+      <small class="prod-desc">Description: {{ item.description }} </small><br/>
+      <small class="prod-price">Price: {{ item.price }} </small>      
+
+      <button ion-button color="primary" item-right (click)="viewEntry({ record: item })">View</button>
+
+   </ion-item>
+
+
+
+
+</ion-content>

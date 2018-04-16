@@ -1,0 +1,88 @@
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>
+            My Products
+        </ion-title>
+    </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>
+
+    <div *ngIf="!isLoggedIn; else loginTemplate">  
+
+        <div class="logo text-center">
+            
+            <img src="../assets/imgs/logo-rest.png" style="margin: 0 auto;"/>
+     
+            <p> Create your account and enjoy this app</p>
+
+            <button ion-button icon-left block color="secondary" (click)="login()"> <ion-icon name="log-in"></ion-icon> Sign In</button>
+
+            <!-- <button ion-button icon-left block outline color="light" (click)="signup()"><ion-icon ios="ios-create-outline"></ion-icon> Create Account</button> -->
+
+            <button ion-button color="light" icon-left outline block (click)="loginGoogle()"><ion-icon name="logo-google" ></ion-icon>Signin with Google</button>
+
+            <button ion-button block outline (click)="logout()" color="light">Signout Google</button> 
+
+            <button ion-button block outline color="light" (click)="checkGoogle()">Check Finger Print </button>
+
+            <button ion-button block outline color="light" (click)="disconnect()">Disconnect Google</button>
+
+
+            <!-- <button ion-button block small clear  color="light">No account yet? Sign up now</button>
+            <button ion-button block small clear (click)="landing()" color="light">view landing</button>-->
+
+        </div>
+
+    <!--     <div class="alter_login">
+            <button ion-button color="light" icon-left small block round><ion-icon name="logo-facebook"></ion-icon> Signin using Facebook</button>
+            <button ion-button color="light" icon-left outline block round  (click)="loginGoogle()"><ion-icon name="logo-google"></ion-icon>Signin with Google</button>
+
+        </div> -->
+
+    </div>
+
+
+    <ng-template #loginTemplate>
+
+        <div class="test">
+
+           
+       <!--      <ion-grid>
+            
+                <ion-row>
+                    <ion-col col-6 text-center><ion-icon block name="ios-basket" class="product-box"  color="primary" (click)="viewproduct()"></ion-icon></ion-col>
+                </ion-row>
+
+            </ion-grid> -->
+            <button ion-button small (click)="logout()" class="logoutBtn">Logout</button>
+
+            <h2>Welcome, {{displayName}}!</h2>
+
+            <p>
+                Email: {{email}}<br>
+                Family Name: {{familyName}}<br>
+                Given Name: {{givenName}}<br>
+                <!-- User ID: {{userId}} -->
+            </p>
+
+            <p>
+                <ion-avatar item-left>
+                    <img src="{{imageUrl}}">
+                </ion-avatar>
+            </p>
+
+            <p></p>
+
+        </div>
+    </ng-template>
+
+
+
+
+
+
+
+
+</ion-content>
+

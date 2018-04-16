@@ -1,0 +1,32 @@
+page-landing {
+	
+	[padding] {
+
+
+
+		// background: #bf2f2f;
+
+
+		
+	}
+
+
+
+	.product-box {
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		border: 1px #ddd solid; 
+		font-size: 3em;
+
+		&.product-bitcoin {
+			color: #f3b600;
+		}
+
+		&.product-beer {
+			color: #fc8f1b;
+		}
+	}
+
+
+}
